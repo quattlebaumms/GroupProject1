@@ -7,7 +7,7 @@ body
 /*added page-container class to the primary/top-most container div of each html page*/
 .page-container 
 {
-    background-color: rgba(218, 108, 88, 0.973);
+    background-color: rgb(255,103,101);
     padding: 0;
 }
 
@@ -59,7 +59,7 @@ body
 		4px 4px 0 #000;
 } */
 .searchWord {
-    color:blue;
+    color: rgb(250,96,0);
     font-family: 'Ultra', serif;
     text-shadow:
         -2px -2px 0 #000,
@@ -67,7 +67,8 @@ body
 		-2px 2px 0 #000,
         2px 2px 0 #000;
         text-align: center;
-        margin: 20px;
+        margin: -25px 0px 40px 0px;
+        
 }
 /*added this container div to encapsulate the translate.html and dictionary.html main content under the header*/ 
 .content-container
@@ -131,3 +132,23 @@ body
     min-height: 300px;
 }
 
+.sunshine {
+
+   background-color: rgb(208,191,0);
+   border: 1px solid black;
+   color: black;
+   font-size: 20px;
+}
+.moon {
+    background-color: rgb(69,240,240);
+    border: 1px solid black;
+    color: black;
+    font-size:20px;
+}
+.bg-light {
+    padding: 0
+}
+.star {
+    background-color: rgb(243,2,81);
+    padding:20px 30px 20px 30px;
+}
