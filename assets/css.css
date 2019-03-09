@@ -23,14 +23,14 @@ body
 /*added h1 to translate and dictionary html, replaced h1 on index html - matched styling*/
 .title
 {
-    font-size: 52px;
+    font-size: 70px;
     font-family: 'Ultra', serif;
     color: wheat;
     text-shadow:
-        -1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+        -6px -6px 0 #000,
+		6px -6px 0 #000,
+		-6px 6px 0 #000,
+		6px 6px 0 #000;
 }
 
 /*not sure what the -4 is after display, bootstrap? But this is the secondary h1 div on translate and dictionary*/
@@ -40,24 +40,35 @@ body
     font-family: 'Ultra', serif;
     color: wheat;
     text-shadow:
-        -1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+        -4px -4px 0 #000,
+		4px -4px 0 #000,
+		-4px 4px 0 #000,
+		4px 4px 0 #000;
 }
 
 /*the paragraph class in the header of the html*/
-.lead
+/* I commented this out and added an h1 tag to make the header look a little cleaner. -madelyn.
+/* .lead
 {
     font-family: 'Ultra', serif;
     color: wheat;
     text-shadow:
-        -1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+        -4px -4px 0 #000,
+		4px -4px 0 #000,
+		-4px 4px 0 #000,
+		4px 4px 0 #000;
+} */
+.searchWord {
+    color:blue;
+    font-family: 'Ultra', serif;
+    text-shadow:
+        -2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+        2px 2px 0 #000;
+        text-align: center;
+        margin: 20px;
 }
-
 /*added this container div to encapsulate the translate.html and dictionary.html main content under the header*/ 
 .content-container
 {
