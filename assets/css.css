@@ -122,6 +122,12 @@ body
 /*this is to extend the search results div to the bottom of the page*/
 .search-results
 {
+    background-color: white;
+    color:black;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 40px;
+    padding: 30px;
     min-height: 300px;
 }
 
