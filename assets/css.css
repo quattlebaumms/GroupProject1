@@ -146,3 +146,19 @@ body
     background-color: rgb(243,2,81);
     padding:20px 30px 20px 30px;
 }
+.paragraphs {
+    color:black;
+    text-align: center;
+    font-size: 25px;
+    font-family:  'Ultra', serif;
+    background-color: rgb(60,13,127);
+    /* border: 1px solid white; */
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke: white; */
+    text-shadow: 
+     1px  1px     #fff, 
+    -1px  1px     #fff, 
+     1px -1px     #fff, 
+    -1px -1px     #fff,
+     1px  1px 5px #555;
+}
