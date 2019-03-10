@@ -7,7 +7,7 @@ body
 /*added page-container class to the primary/top-most container div of each html page*/
 .page-container 
 {
-    background-color: rgba(218, 108, 88, 0.973);
+    background-color: rgb(255,103,101);
     padding: 0;
 }
 
@@ -23,14 +23,14 @@ body
 /*added h1 to translate and dictionary html, replaced h1 on index html - matched styling*/
 .title
 {
-    font-size: 52px;
+    font-size: 70px;
     font-family: 'Ultra', serif;
     color: wheat;
     text-shadow:
-        -5px -5px 0 #000,
-		5px -5px 0 #000,
-		-5px 5px 0 #000,
-		5px 5px 0 #000;
+        -6px -6px 0 #000,
+		6px -6px 0 #000,
+		-6px 6px 0 #000,
+		6px 6px 0 #000;
 }
 
 /*not sure what the -4 is after display, bootstrap? But this is the secondary h1 div on translate and dictionary*/
@@ -40,24 +40,36 @@ body
     font-family: 'Ultra', serif;
     color: wheat;
     text-shadow:
-        -1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+        -4px -4px 0 #000,
+		4px -4px 0 #000,
+		-4px 4px 0 #000,
+		4px 4px 0 #000;
 }
 
 /*the paragraph class in the header of the html*/
-.lead
+/* I commented this out and added an h1 tag to make the header look a little cleaner. -madelyn.
+/* .lead
 {
     font-family: 'Ultra', serif;
     color: wheat;
     text-shadow:
-        -1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+        -4px -4px 0 #000,
+		4px -4px 0 #000,
+		-4px 4px 0 #000,
+		4px 4px 0 #000;
+} */
+.searchWord {
+    color: rgb(250,96,0);
+    font-family: 'Ultra', serif;
+    text-shadow:
+        -2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+        2px 2px 0 #000;
+        text-align: center;
+        margin: -25px 0px 40px 0px;
+        
 }
-
 /*added this container div to encapsulate the translate.html and dictionary.html main content under the header*/ 
 .content-container
 {
@@ -111,8 +123,33 @@ body
 /*this is to extend the search results div to the bottom of the page*/
 .search-results
 {
+    background-color: white;
+    color:black;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 40px;
+    padding: 30px;
     min-height: 300px;
 }
 
+.sunshine {
 
+   background-color: rgb(208,191,0);
+   border: 1px solid black;
+   color: black;
+   font-size: 20px;
+}
+.moon {
+    background-color: rgb(69,240,240);
+    border: 1px solid black;
+    color: black;
+    font-size:20px;
+}
+.bg-light {
+    padding: 0
+}
+.star {
+    background-color: rgb(243,2,81);
+    padding:20px 30px 20px 30px;
+}
 

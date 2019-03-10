@@ -33,10 +33,11 @@
                         <div class="container">
                             <h1 class='title'>Wordstock</h1>
                             <h1 class="display-4">Translator</h1>
-                            <p class="lead">Type a sentence to translate!</p>
+                            <!-- <p class="lead">Type a sentence to translate!</p> -->
                         </div>
                     </div>
                 </header>
+
                 <div class='content-container'>
                     <div class="navbar contentRow">
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -47,13 +48,14 @@
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div class="navbar-nav">
-                                    <a class="nav-item nav-link active" href="index.html">Home <span
+                                    <a class="nav-item nav-link active sunshine" href="index.html">Home <span
                                             class="sr-only">(current)</span></a>
-                                    <a class="nav-item nav-link" href="dictionary.html">Dictionary</a>
+                                    <a class="nav-item nav-link active moon" href="dictionary.html">Dictionary</a>
                                 </div>
                             </div>
                         </nav>
                     </div>
+                    <h1 class="searchWord">Search a word to find out what it means!</h1>
                     <div class="searchBar contentRow">
                         <form class="form-inline contentRow">
                             <!-- <div class="form-group mb-2">
@@ -61,6 +63,16 @@
                                     <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
                                         value="email@example.com">
                                 </div> -->
+                            <div class="form-group mx-sm-1 mb-2">
+                                <!--<label for="exampleFormControlSelect1">Select a language: </label>-->
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>English</option>
+                                    <option>Spanish</option>
+                                    <option>Russian</option>
+                                    <option>French</option>
+                                    <option>Italian</option>
+                                </select>
+                            </div>
                             <div class="form-group mx-sm-3 mb-2">
                                 <label for="phrase2translate" class="sr-only"></label>
                                 <input type="text" class="form-control" id="phrase2translate"
@@ -75,8 +87,9 @@
                     </div>
                 </div>
             </div>
+    </div>
 
-        </body>
-        <script src="assets/javascript.js"></script>
+</body>
+<script src="assets/javascript.js"></script>
 
 </html>
