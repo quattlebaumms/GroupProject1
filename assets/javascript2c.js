@@ -20,24 +20,33 @@ $dictionarySubmit.on('click', function (event) {
 
     event.preventDefault();
 
-    $word2search = $wordInput.val();
+    var $word2search = $wordInput.val().trim();
     var queryURL = 'https://wordsapiv1.p.mashape.com/words/' + $word2search;
-    debugger;
+    var $searchResults = $('.search-results');
 
 
     $.ajax({
         url: queryURL,
         method: 'GET',
         headers: {
-            "X-Mashape-Key": 'b88960534emsh3986e79d77e9244p1a45ccjsn600c13ed9dfa',
+            "X-Mashape-Key": '',
             'Accept': 'application/json'
         }
     }).then(function (response) {
-        var results = response.data;
+        var word = response.word;
+        var definition = response.results.definition;
         console.log(response);
+        console.log(word);
+        console.log(definition);
+
+
+
+
+
+
+
+
     });
-
-
 });
 
 

@@ -27,10 +27,10 @@ body
     font-family: 'Ultra', serif;
     color: wheat;
     text-shadow:
-        -1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+        -5px -5px 0 #000,
+		5px -5px 0 #000,
+		-5px 5px 0 #000,
+		5px 5px 0 #000;
 }
 
 /*not sure what the -4 is after display, bootstrap? But this is the secondary h1 div on translate and dictionary*/
@@ -113,4 +113,6 @@ body
 {
     min-height: 300px;
 }
+
+
 
