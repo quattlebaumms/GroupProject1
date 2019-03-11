@@ -19,7 +19,12 @@ console.log($translateButton);
 $translateButton.on('click', function (event) {
     event.preventDefault();
 
-    var pairTest = 'langpair=en|sp';
+    var convertFrom = $('#convertFrom').val().trim();
+    var convertTo = $('#convertTo').val().trim();
+
+
+
+    var pairTest = 'langpair=' + convertFrom + '|' + convertTo;
 
     $translate = $phrase2translate.val().trim();
     var queryURL = 'https://api.mymemory.translated.net/get?' + pairTest;
@@ -32,6 +37,11 @@ $translateButton.on('click', function (event) {
         }
     }).then(function (response) {
         console.log(response);
+        var translatedText = response.responseData.translatedText;
+
+        var $resultsDiv = $('#resultsField');
+
+        $resultsDiv.text(translatedText);
     });
 });
 

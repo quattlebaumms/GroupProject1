@@ -9,6 +9,7 @@ body
 {
     background-color: rgb(255,103,101);
     padding: 0;
+    
 }
 
 /*main recurring page header - added class pageHeader*/
@@ -18,6 +19,7 @@ body
     background-size: cover;
     text-align: center;
     margin: 0;
+    
 }
 
 /*added h1 to translate and dictionary html, replaced h1 on index html - matched styling*/
@@ -151,5 +153,85 @@ body
 .star {
     background-color: rgb(243,2,81);
     padding:20px 30px 20px 30px;
+}
+
+#definitionCard-header
+{
+    font-size: 34px;
+    font-weight: bolder;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#list-container
+{
+    font-size: 18px;
+    background-color: white;
+    line-height: 2;
+}
+
+#noSynList
+{
+    display: inline-block;
+    text-align: left;
+}
+
+.welcome
+{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 36px;
+    font-family: 'Ultra', serif;
+    color: wheat;
+    text-shadow:
+        -1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+        1px 1px 0 #000;
+    border-bottom: 7px dotted darkslategray;
+}
+
+#translateButtonHolder
+{
+    width: 100%;
+    margin-top: 20px;
+}
+
+#translateForm
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#convertTo
+{
+    margin-left: 15px;
+}
+
+#convertFrom
+{
+    margin-left: 15px;
+}
+
+.phraseInput
+{
+    min-width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+#phrase2translate
+{
+    min-width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#resultsField
+{
+    font-size: 34px;
+    font-weight: bold;
 }
 

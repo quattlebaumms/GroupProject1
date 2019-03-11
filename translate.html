@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="assets/images1/">
     <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <title>Translator</title>
 </head>
 
@@ -58,32 +59,46 @@
                     <h1 class="searchWord">Search a word to find out what it means!</h1>
                     <div class="searchBar contentRow">
                         <form class="form-inline contentRow">
-                            <!-- <div class="form-group mb-2">
-                                    <label for="staticEmail2" class="sr-only">Email</label>
-                                    <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
-                                        value="email@example.com">
-                                </div> -->
-                            <div class="form-group mx-sm-1 mb-2">
-                                <!--<label for="exampleFormControlSelect1">Select a language: </label>-->
-                                <select class="form-control" id="exampleFormControlSelect1">
-                                    <option>English</option>
-                                    <option>Spanish</option>
-                                    <option>Russian</option>
-                                    <option>French</option>
-                                    <option>Italian</option>
-                                </select>
+                            <div class='container' id='translateForm'>
+                                <div class="form-group mx-sm-1 mb-2">
+                                    <h4 id='conversionGuideText'>Select the language you of your inquiry:</h4>
+                                    <select class="form-control" id="convertFrom">
+                                        <option value='en'>English</option>
+                                        <option value='es'>Spanish</option>
+                                        <option value='ru'>Russian</option>
+                                        <option value='fr'>French</option>
+                                        <option value='it'>Italian</option>
+                                        <option value='zh'>Chinese</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mx-sm-3 mb-2 phraseInput">
+                                    <label for="phrase2translate" class="sr-only"></label>
+                                    <input type="text" class="form-control" id="phrase2translate"
+                                        placeholder="What do you want to translate?">
+                                </div>
+                                <div class="form-group mx-sm-1 mb-2">
+                                    <h4 id='conversionGuideText'>Select the language you wish to translate to:</h4>
+                                    <select class="form-control" id="convertTo">
+                                        <option value='en'>English</option>
+                                        <option value='es'>Spanish</option>
+                                        <option value='ru'>Russian</option>
+                                        <option value='fr'>French</option>
+                                        <option value='it'>Italian</option>
+                                        <option value='zh'>Chinese</option>
+                                    </select>
+                                </div>
+                                <!--Might need to create a new div somewhere within this area for the language paramater input-->
+                                <div id='translateButtonHolder'>
+                                    <button type="submit" class="btn btn-primary mb-2"
+                                        id='translateButton'>Search</button>
+                                </div>
                             </div>
-                            <div class="form-group mx-sm-3 mb-2">
-                                <label for="phrase2translate" class="sr-only"></label>
-                                <input type="text" class="form-control" id="phrase2translate"
-                                    placeholder="What do you want to translate?">
-                            </div>
-                            <!--Might need to create a new div somewhere within this area for the language paramater input-->
-                            <button type="submit" class="btn btn-primary mb-2" id='translateButton'>Search</button>
                         </form>
                     </div>
-                    <div class="search-results contentRow">
-                        (Translation shows here).
+                    <div class="search-results contentRow translatorResults">
+                        <div id="resultsField">
+                            (Translation shows here).
+                        </div>
                     </div>
                 </div>
             </div>
