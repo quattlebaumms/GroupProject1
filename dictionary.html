@@ -20,6 +20,8 @@
     <link rel="stylesheet" type="text/css" href="assets/images1/">
     <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://storage.googleapis.com/code-snippets/rapidapi.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <title>Dictionary</title>
 </head>
 
@@ -54,17 +56,13 @@
             </div>
             <h1 class="searchWord">Search a word to find out what it means!</h1>
             <div class="searchBar contentRow">
-                <form class="form-inline contentRow">
-                    <!-- <div class="form-group mb-2">
-                    <label for="staticEmail2" class="sr-only">Email</label>
-                    <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
-                        value="email@example.com">
-                </div> -->
+                <form class="form-inline contentRow inputArea">
+                    <h1 id='alerts'></h1>
                     <div class="form-group mx-sm-3 mb-2">
-                        <label for="inputWord2" class="sr-only"></label>
-                        <input type="text" class="form-control" id="inputWord2" placeholder="Type a word">
+                        <label for="wordInput" class="sr-only"></label>
+                        <input type="text" class="form-control" id="wordInput" placeholder="Type a word">
                     </div>
-                    <button type="submit" class="btn btn-primary mb-2 star">Search</button>
+                    <button type="submit" class="btn btn-primary mb-2" id='dictionarySubmit'>Search</button>
                 </form>
             </div>
             <div class="search-results contentRow">
@@ -74,5 +72,6 @@
     </div>
     </div>
 </body>
+<script src="assets/javascript2c.js"></script>
 
 </html>
