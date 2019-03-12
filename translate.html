@@ -40,14 +40,14 @@
                 </header>
 
                 <div class='content-container'>
-                    <div class="navbar contentRow">
+                    <div class="navbar contentRow secondaryPageNav">
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                                 aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="collapse navbar-collapse secondaryNavButtons" id="navbarNavAltMarkup">
                                 <div class="navbar-nav">
                                     <a class="nav-item nav-link active sunshine" href="index.html">Home <span
                                             class="sr-only">(current)</span></a>
@@ -61,7 +61,7 @@
                         <form class="form-inline contentRow">
                             <div class='container' id='translateForm'>
                                 <div class="form-group mx-sm-1 mb-2">
-                                    <h4 id='conversionGuideText'>Select the language you of your inquiry:</h4>
+                                    <h4 id='conversionGuideText'>Select the language of your inquiry:</h4>
                                     <select class="form-control" id="convertFrom">
                                         <option value='en'>English</option>
                                         <option value='es'>Spanish</option>
@@ -75,11 +75,7 @@
                                         <option value='zu'>Zulu</option>
                                     </select>
                                 </div>
-                                <div class="form-group mx-sm-3 mb-2 phraseInput">
-                                    <label for="phrase2translate" class="sr-only"></label>
-                                    <input type="text" class="form-control" id="phrase2translate"
-                                        placeholder="What do you want to translate?">
-                                </div>
+
                                 <div class="form-group mx-sm-1 mb-2">
                                     <h4 id='conversionGuideText'>Select the language you wish to translate to:</h4>
                                     <select class="form-control" id="convertTo">
@@ -95,9 +91,14 @@
                                         <option value='zu'>Zulu</option>
                                     </select>
                                 </div>
+                                <div class="form-group mx-sm-3 mb-2 phraseInput">
+                                    <label for="phrase2translate" class="sr-only"></label>
+                                    <input type="text" class="form-control" id="phrase2translate"
+                                        placeholder="Translate:">
+                                </div>
                                 <!--Might need to create a new div somewhere within this area for the language paramater input-->
                                 <div id='translateButtonHolder'>
-                                    <button type="submit" class="btn btn-primary mb-2"
+                                    <button type="submit" class="btn btn-primary mb-2 secondaryPageButton"
                                         id='translateButton'>Search</button>
                                 </div>
                             </div>
