@@ -20,8 +20,6 @@ $dictionarySubmit.on('click', function (event) {
             $wordInput.removeClass('animated wobble');
         });
 
-
-
         if ($wordInput.val() === '') {
             $alerts.text('You have to enter a word first.');
         }
