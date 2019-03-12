@@ -1,7 +1,7 @@
 body
 {
     /*sample/placeholder background - just laying something basic out*/
-    background: url('../assets/images1/green-background-2.jpg');
+    background: url('../assets/images1/bodyBackground.jpg');
 }
 
 /*added page-container class to the primary/top-most container div of each html page*/
@@ -15,7 +15,7 @@ body
 /*main recurring page header - added class pageHeader*/
 .pageHeader
 {
-    background: url('../assets/images1/trippy.jpg');
+    background: url('../assets/images1/headerBackground.jpg');
     background-size: cover;
     text-align: center;
     margin: 0;
@@ -231,7 +231,13 @@ body
 
 #resultsField
 {
-    font-size: 34px;
+    font-size: 80px;
     font-weight: bold;
+    margin-top: 40px;
+}
+
+#alertDiv
+{
+    text-align: center;
 }
 

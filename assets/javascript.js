@@ -21,27 +21,55 @@ $translateButton.on('click', function (event) {
 
     var convertFrom = $('#convertFrom').val().trim();
     var convertTo = $('#convertTo').val().trim();
-
-
-
     var pairTest = 'langpair=' + convertFrom + '|' + convertTo;
+    var $alerts = $('#alerts');
 
     $translate = $phrase2translate.val().trim();
     var queryURL = 'https://api.mymemory.translated.net/get?' + pairTest;
 
-    $.ajax({
-        url: queryURL,
-        method: 'GET',
-        data: {
-            q: $translate
+    if ($translate === '' || /[^a-z]/i.test($translate)) {
+        $phrase2translate.addClass('animated wobble');
+        $phrase2translate.css('animation-duration', '2s');
+        //need to add css styles to this div for browser specific animations*
+        $phrase2translate.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $phrase2translate.removeClass('animated wobble');
+            $phrase2translate.val('');
+        });
+
+        if ($phrase2translate.val() === '') {
+            $alerts.text('You have to enter a word first.');
         }
-    }).then(function (response) {
-        console.log(response);
-        var translatedText = response.responseData.translatedText;
+        else {
+            $alerts.text("Invalid word. You can only use letters.");
+        }
+    }
+    else {
+        $alerts.empty();
+        $.ajax({
+            url: queryURL,
+            method: 'GET',
+            data: {
+                q: $translate
+            },
+            success: function (response) {
+                console.log(response);
+                var translatedText = response.responseData.translatedText;
 
-        var $resultsDiv = $('#resultsField');
+                var $resultsDiv = $('#resultsField');
 
-        $resultsDiv.text(translatedText);
-    });
+                $resultsDiv.text(translatedText);
+            },
+            error: function (error) {
+                $phrase2translate.addClass('animated wobble');
+                $phrase2translate.css('animation-duration', '2s');
+                $phrase2translate.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                    $phrase2translate.removeClass('animated wobble');
+                });
+                console.log(error);
+            }
+        });
+    }
+
+
 });
 

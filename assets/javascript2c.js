@@ -5,7 +5,7 @@ var $searchResults = $('.search-results');
 
 $dictionarySubmit.on('click', function (event) {
     event.preventDefault();
-
+    console.log('this is working');
     var $alerts = $('#alerts');
     var $word2search = $wordInput.val().trim().toLowerCase();
     var queryURL = 'https://wordsapiv1.p.mashape.com/words/' + $word2search;
@@ -19,8 +19,6 @@ $dictionarySubmit.on('click', function (event) {
         $wordInput.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
             $wordInput.removeClass('animated wobble');
         });
-
-
 
         if ($wordInput.val() === '') {
             $alerts.text('You have to enter a word first.');
