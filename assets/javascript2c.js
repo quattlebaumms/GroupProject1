@@ -109,6 +109,8 @@ $dictionarySubmit.on('click', function (event) {
                 $wordInput.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
                     $wordInput.removeClass('animated wobble');
                 });
+
+                //add alert text
             }
         });
     }
