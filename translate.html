@@ -33,21 +33,21 @@
                     <div class="jumbotron jumbotron-fluid pageHeader">
                         <div class="container">
                             <h1 class='title'>Wordstock</h1>
-                            <h1 class="display-4">Translator</h1>
+                            <!-- <h1 class="display-4">Translator</h1> -->
                             <!-- <p class="lead">Type a sentence to translate!</p> -->
                         </div>
                     </div>
                 </header>
 
                 <div class='content-container'>
-                    <div class="navbar contentRow secondaryPageNav">
+                    <div class="navbar contentRow">
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                                 aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <div class="collapse navbar-collapse secondaryNavButtons" id="navbarNavAltMarkup">
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div class="navbar-nav">
                                     <a class="nav-item nav-link active sunshine" href="index.html">Home <span
                                             class="sr-only">(current)</span></a>
@@ -56,29 +56,13 @@
                             </div>
                         </nav>
                     </div>
-                    <h1 class="searchWord">Search a word to find out what it means!</h1>
+                    <!-- <h1 class="searchWord">Search a word to find out what it means!</h1> -->
                     <div class="searchBar contentRow">
                         <form class="form-inline contentRow">
                             <div class='container' id='translateForm'>
                                 <div class="form-group mx-sm-1 mb-2">
-                                    <h4 id='conversionGuideText'>Select the language of your inquiry:</h4>
+                                    <h4 id='conversionGuideText'>Select the language you of your inquiry:</h4>
                                     <select class="form-control" id="convertFrom">
-                                        <option value='en'>English</option>
-                                        <option value='es'>Spanish</option>
-                                        <option value='ru'>Russian</option>
-                                        <option value='fr'>French</option>
-                                        <option value='it'>Italian</option>
-                                        <option value='zh'>Chinese</option>
-                                        <option value='gd'>Gaelic</option>
-                                        <option value='ja'>Japanese</option>
-                                        <option value='la'>Latin</option>
-                                        <option value='zu'>Zulu</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group mx-sm-1 mb-2">
-                                    <h4 id='conversionGuideText'>Select the language you wish to translate to:</h4>
-                                    <select class="form-control" id="convertTo">
                                         <option value='en'>English</option>
                                         <option value='es'>Spanish</option>
                                         <option value='ru'>Russian</option>
@@ -94,11 +78,26 @@
                                 <div class="form-group mx-sm-3 mb-2 phraseInput">
                                     <label for="phrase2translate" class="sr-only"></label>
                                     <input type="text" class="form-control" id="phrase2translate"
-                                        placeholder="Translate:">
+                                        placeholder="What do you want to translate?">
+                                </div>
+                                <div class="form-group mx-sm-1 mb-2">
+                                    <h4 id='conversionGuideText'>Select the language you wish to translate to:</h4>
+                                    <select class="form-control" id="convertTo">
+                                        <option value='en'>English</option>
+                                        <option value='es'>Spanish</option>
+                                        <option value='ru'>Russian</option>
+                                        <option value='fr'>French</option>
+                                        <option value='it'>Italian</option>
+                                        <option value='zh'>Chinese</option>
+                                        <option value='gd'>Gaelic</option>
+                                        <option value='ja'>Japanese</option>
+                                        <option value='la'>Latin</option>
+                                        <option value='zu'>Zulu</option>
+                                    </select>
                                 </div>
                                 <!--Might need to create a new div somewhere within this area for the language paramater input-->
                                 <div id='translateButtonHolder'>
-                                    <button type="submit" class="btn btn-primary mb-2 secondaryPageButton"
+                                    <button type="submit" class="btn btn-primary mb-2"
                                         id='translateButton'>Search</button>
                                 </div>
                             </div>

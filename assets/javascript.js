@@ -16,7 +16,6 @@ $dictionaryButton.on('click', function () {
 var $translateButton = $('#translateButton');
 var $phrase2translate = $('#phrase2translate');
 console.log($translateButton);
-
 $translateButton.on('click', function (event) {
     event.preventDefault();
 
@@ -28,11 +27,7 @@ $translateButton.on('click', function (event) {
     $translate = $phrase2translate.val().trim();
     var queryURL = 'https://api.mymemory.translated.net/get?' + pairTest;
 
-    var testInput = $translate.replace(/\s+/g, '');
-
-
-    if ($translate === '' || /[^a-z]/i.test(testInput)) {
-        $('#resultsField').empty();
+    if ($translate === '' || /[^a-z]/i.test($translate)) {
         $phrase2translate.addClass('animated wobble');
         $phrase2translate.css('animation-duration', '2s');
         //need to add css styles to this div for browser specific animations*
@@ -42,10 +37,10 @@ $translateButton.on('click', function (event) {
         });
 
         if ($phrase2translate.val() === '') {
-            $alerts.text('You must enter a word or sentence to search.');
+            $alerts.text('You have to enter a word first.');
         }
         else {
-            $alerts.text("Invalid input. You can only use letters.");
+            $alerts.text("Invalid word. You can only use letters.");
         }
     }
     else {
