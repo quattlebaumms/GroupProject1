@@ -27,7 +27,11 @@ $translateButton.on('click', function (event) {
     $translate = $phrase2translate.val().trim();
     var queryURL = 'https://api.mymemory.translated.net/get?' + pairTest;
 
-    if ($translate === '' || /[^a-z]/i.test($translate)) {
+    var testInput = $translate.replace(/\s+/g, '');
+
+
+    if ($translate === '' || /[^a-z]/i.test(testInput)) {
+        $('#resultsField').empty();
         $phrase2translate.addClass('animated wobble');
         $phrase2translate.css('animation-duration', '2s');
         //need to add css styles to this div for browser specific animations*
