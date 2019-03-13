@@ -1,23 +1,37 @@
 body
 {
     /*sample/placeholder background - just laying something basic out*/
-    background: url('../assets/images1/green-background-2.jpg');
+    background: black;
 }
 
 /*added page-container class to the primary/top-most container div of each html page*/
 .page-container 
 {
-    background-color: rgb(255,103,101);
+    background-image: repeating-radial-gradient(circle, tomato, gold 5%, darkslateblue 10%, lightseagreen 15%, orangered 20%, 
+    purple 25%,  darkcyan 30%, darkslategray 35%);
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container
+{
+    min-width: 100%;
     padding: 0;
 }
 
 /*main recurring page header - added class pageHeader*/
 .pageHeader
 {
-    background: url('../assets/images1/trippy.jpg');
+    background: url('../assets/images1/headerBackground.jpg');
     background-size: cover;
     text-align: center;
     margin: 0;
+}
+
+.jumbotron
+{
+    padding: 20px;
 }
 
 /*added h1 to translate and dictionary html, replaced h1 on index html - matched styling*/
@@ -67,8 +81,6 @@ body
 		-2px 2px 0 #000,
         2px 2px 0 #000;
         text-align: center;
-        margin: -25px 0px 40px 0px;
-        
 }
 /*added this container div to encapsulate the translate.html and dictionary.html main content under the header*/ 
 .content-container
@@ -91,23 +103,32 @@ body
 /*grouped homepage buttons into a container for css management*/
 .button-container-home   
 {
-    margin-top: 30px;
-}
-
-/*left the button-section divs containing each separate button on the home page - wonky way to push them into rows and keep them centered*/
-.button-section
-{
-    width: 100%;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
 }
 
+
+/*left the button-section divs containing each separate button on the home page - wonky way to push them into rows and keep them centered*/
+#homeGuideText
+{
+    font-family: 'Ultra', serif;
+    color: black;
+    text-shadow:
+    -2px -2px 0 wheat,
+    2px -2px 0 wheat,
+    -2px 2px 0 wheat,
+    2px 2px 0 wheat;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    max-width: 60%;
+    font-size: 18px;
+}
+
 /* added class homeButton to the Translate and Dictionary buttons on the homepage*/
 .homebutton
 {
-    height: 55px;
-    margin-top: 35px;
     background-color: rgb(38, 193, 204);
     font-family: 'Ultra', serif;
     color: rgb(255, 136, 0);
