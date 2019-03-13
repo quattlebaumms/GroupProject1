@@ -3,9 +3,12 @@ var $dictionarySubmit = $('#dictionarySubmit');
 var $searchResults = $('.search-results');
 
 
+
+
 $dictionarySubmit.on('click', function (event) {
     event.preventDefault();
     console.log('this is working');
+
     var $alerts = $('#alerts');
     var $word2search = $wordInput.val().trim().toLowerCase();
     var queryURL = 'https://wordsapiv1.p.mashape.com/words/' + $word2search;
@@ -36,7 +39,7 @@ $dictionarySubmit.on('click', function (event) {
             url: queryURL,
             method: 'GET',
             headers: {
-                "X-Mashape-Key": '',
+                "X-Mashape-Key": 'b88960534emsh3986e79d77e9244p1a45ccjsn600c13ed9dfa',
                 'Accept': 'application/json'
             },
             success: function (response) {

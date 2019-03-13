@@ -24,7 +24,8 @@ $translateButton.on('click', function (event) {
     var pairTest = 'langpair=' + convertFrom + '|' + convertTo;
     var $alerts = $('#alerts');
 
-    $translate = $phrase2translate.val().trim();
+    var $translate = $phrase2translate.val().trim();
+
     var queryURL = 'https://api.mymemory.translated.net/get?' + pairTest;
 
     var testInput = $translate.replace(/\s+/g, '');
@@ -57,11 +58,19 @@ $translateButton.on('click', function (event) {
             },
             success: function (response) {
                 console.log(response);
+
                 var translatedText = response.responseData.translatedText;
 
                 var $resultsDiv = $('#resultsField');
 
-                $resultsDiv.text(translatedText);
+                if (translatedText === $translate) {
+                    $resultsDiv.text('No valid translation found.');
+                }
+                else {
+                    $resultsDiv.text(translatedText);
+                }
+
+
             },
             error: function (error) {
                 $phrase2translate.addClass('animated wobble');
