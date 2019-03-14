@@ -16,6 +16,7 @@ $dictionaryButton.on('click', function () {
 var $translateButton = $('#translateButton');
 var $phrase2translate = $('#phrase2translate');
 console.log($translateButton);
+
 $translateButton.on('click', function (event) {
     event.preventDefault();
 
@@ -64,9 +65,20 @@ $translateButton.on('click', function (event) {
                 var $resultsDiv = $('#resultsField');
 
                 if (translatedText === $translate) {
+
+                    $resultsDiv.addClass('animated rotateIn');
+                    $resultsDiv.css('animation-duration', '2s');
+                    $resultsDiv.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                        $resultsDiv.removeClass('animated rotateIn')
+                    });
                     $resultsDiv.text('No valid translation found.');
                 }
                 else {
+                    $resultsDiv.addClass('animated rotateIn');
+                    $resultsDiv.css('animation-duration', '2s');
+                    $resultsDiv.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                        $resultsDiv.removeClass('animated rotateIn')
+                    });
                     $resultsDiv.text(translatedText);
                 }
 
