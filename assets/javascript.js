@@ -31,7 +31,7 @@ $translateButton.on('click', function (event) {
 
     var testInput = $translate.replace(/\s+/g, '');
 
-
+    //
     if ($translate === '' || /[^a-z]/i.test(testInput)) {
         $('#resultsField').empty();
         $phrase2translate.addClass('animated wobble');
