@@ -222,3 +222,13 @@ body
 .tacos {
     background-color: rgb(161,0,114);
 }
+
+#definitionCard-header
+{
+    font-size: 34px;
+}
+
+#resultsField
+{
+    font-size: 34px;
+}

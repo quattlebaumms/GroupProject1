@@ -16,6 +16,7 @@ $dictionaryButton.on('click', function () {
 var $translateButton = $('#translateButton');
 var $phrase2translate = $('#phrase2translate');
 console.log($translateButton);
+
 $translateButton.on('click', function (event) {
     event.preventDefault();
 
@@ -24,12 +25,13 @@ $translateButton.on('click', function (event) {
     var pairTest = 'langpair=' + convertFrom + '|' + convertTo;
     var $alerts = $('#alerts');
 
-    $translate = $phrase2translate.val().trim();
+    var $translate = $phrase2translate.val().trim();
+
     var queryURL = 'https://api.mymemory.translated.net/get?' + pairTest;
 
     var testInput = $translate.replace(/\s+/g, '');
 
-
+    //
     if ($translate === '' || /[^a-z]/i.test(testInput)) {
         $('#resultsField').empty();
         $phrase2translate.addClass('animated wobble');
@@ -57,11 +59,30 @@ $translateButton.on('click', function (event) {
             },
             success: function (response) {
                 console.log(response);
+
                 var translatedText = response.responseData.translatedText;
 
                 var $resultsDiv = $('#resultsField');
 
-                $resultsDiv.text(translatedText);
+                if (translatedText === $translate) {
+
+                    $resultsDiv.addClass('animated rotateIn');
+                    $resultsDiv.css('animation-duration', '2s');
+                    $resultsDiv.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                        $resultsDiv.removeClass('animated rotateIn')
+                    });
+                    $resultsDiv.text('No valid translation found.');
+                }
+                else {
+                    $resultsDiv.addClass('animated rotateIn');
+                    $resultsDiv.css('animation-duration', '2s');
+                    $resultsDiv.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                        $resultsDiv.removeClass('animated rotateIn')
+                    });
+                    $resultsDiv.text(translatedText);
+                }
+
+
             },
             error: function (error) {
                 $phrase2translate.addClass('animated wobble');
